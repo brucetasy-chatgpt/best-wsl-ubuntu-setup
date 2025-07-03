@@ -135,7 +135,7 @@ sudo apt update && sudo apt upgrade -y
 
 部分設定參考自 [Set up a WSL development environment](https://learn.microsoft.com/en-us/windows/wsl/setup/environment?WT.mc_id=DT-MVP-4015686) 文件，但大多是我個人的經驗與習慣。
 
-### 設定無密碼變身 `root` 執行
+### 設定無密碼變身 `root` 執行  (❌不建議，偶爾還是要冷靜一下)
 
 ```sh
 # sudoers
@@ -184,7 +184,7 @@ node -v
 ### 設定 Bash 環境
 
 ```sh
-# profile setup
+# profile setup [✅直接貼入下面指令]
 cat <<'EOF' | tee -a ~/.profile
 export EDITOR=vim
 export GPG_TTY=$(tty)
@@ -224,6 +224,25 @@ mkdir -p ~/.config && touch ~/.config/starship.toml
 starship preset catppuccin-powerline -o ~/.config/starship.toml
 ```
 
+#### 如果沒有套用，請檢查
+
+- 1️⃣ 確認 starship 有安裝
+
+```sh
+starship --version
+```
+
+- 2️⃣ 把 starship 加入 ~/.bashrc
+```sh
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
+```
+
+- 3️⃣ 重新載入 shell
+```sh
+tarship preset catppuccin-powerline -o ~/.config/starship.toml
+```
+
+- 
 ### 安裝 [fzf](https://github.com/junegunn/fzf) 工具
 
 這是一個非常強大的命令列模糊搜尋工具，可以讓你在終端機中快速找到檔案或目錄。
