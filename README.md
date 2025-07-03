@@ -239,7 +239,12 @@ echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 - 3️⃣ 重新載入 shell
 ```sh
-tarship preset catppuccin-powerline -o ~/.config/starship.toml
+source ~/.bashrc
+```
+
+- 4️⃣ 確認有載入樣式：
+```sh
+starship preset catppuccin-powerline -o ~/.config/starship.toml
 ```
 
 ### 安裝 [fzf](https://github.com/junegunn/fzf) 工具
