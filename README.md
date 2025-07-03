@@ -242,7 +242,6 @@ echo 'eval "$(starship init bash)"' >> ~/.bashrc
 tarship preset catppuccin-powerline -o ~/.config/starship.toml
 ```
 
-- 
 ### 安裝 [fzf](https://github.com/junegunn/fzf) 工具
 
 這是一個非常強大的命令列模糊搜尋工具，可以讓你在終端機中快速找到檔案或目錄。
